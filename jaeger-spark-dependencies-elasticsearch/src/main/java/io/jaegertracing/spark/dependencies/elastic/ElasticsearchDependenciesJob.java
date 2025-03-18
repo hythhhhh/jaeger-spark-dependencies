@@ -69,7 +69,7 @@ public class ElasticsearchDependenciesJob {
       sparkProperties.put("spark.ui.enabled", "false");
       // don't die if there are no spans
       sparkProperties.put("es.index.read.missing.as.empty", "true");
-      sparkProperties.put("es.net.ssl.cert.allow.self.signed", "true");
+      sparkProperties.put("es.net.ssl.verification.mode", "none");
       sparkProperties.put("es.net.ssl.keystore.location",
           getSystemPropertyAsFileResource("javax.net.ssl.keyStore"));
       sparkProperties.put("es.net.ssl.keystore.pass",
